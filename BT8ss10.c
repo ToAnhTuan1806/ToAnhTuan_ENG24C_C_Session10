@@ -2,7 +2,7 @@
 
 int main(){
 	int m, n, temp;
-	int i,j,k;
+	int i,j,z;
 	
 	printf("Nhap so dong: ");
 	scanf("%d", &n);
@@ -19,11 +19,11 @@ int main(){
 	}
 	for(i=0; i<n-1; i++) {
 		for(j=0; j<m; j++) {
-			for(k=i +1; k<n; k++) {
-				if(arr[i][j] > arr[k][j]) {
+			for(z=i +1; z<n; z++) {
+				if(arr[i][j] > arr[z][j]) {
 					temp = arr[i][j];
-					arr[i][j] = arr[k][j];
-					arr[k][j] = temp;
+					arr[i][j] = arr[z][j];
+					arr[z][j] = temp;
 				}
 			}
 		}
